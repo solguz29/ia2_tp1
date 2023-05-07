@@ -1,14 +1,10 @@
 let t = [];
 let cantidad = 16;
-//let ubRandom;
 let nombre;
-
 
 let estado;
 let estadoFinal = 5;
 
-/*let maxCirculos = 25;
-let minCirculos = 10;*/
 let cuantosCirculos = 23;
 
 let ubicaciones = [];
@@ -18,13 +14,6 @@ let unGrosor;
 let gros;
 let grosores = [];
 
-
-/*
-  Si unColor = 1, es un solo color
-  Si unColor = 0, puede ser monoCromo o variado
-    Si monoCromo = 1, es monocromatico
-    Si monoCromo = 0, es variado 
-*/
 let unColor;
 let monoCromo;
 let cuantosColores;
@@ -58,7 +47,6 @@ function setup() {
   interruptor = true;
   tiempo = 0;
   
-  //Definimos ubicaciones
   setearUbicaciones();  
   setearColores();  
   setearGrosores();
@@ -68,7 +56,6 @@ function setup() {
 }
 
 function draw() {
-
   
   //CONTROL DE TIEMPO
   if (interruptor == false){
@@ -157,7 +144,7 @@ function mousePressed(){
         llamarConstructor();
 
         tiempo = 0;  
-       interruptor = false; 
+        interruptor = false; 
       }       
     }    
   }
@@ -221,8 +208,7 @@ function setearColores(){
           col = random(255); 
           setColores[i] = color(col,sat,bri);
         }
-      }   
-      
+      }         
 
       for(i=0;i<cuantosCirculos;i++){
         colores[i] = random(setColores);

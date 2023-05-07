@@ -6,22 +6,21 @@ let j = 0;
 
 class Triangulo{
 
-    constructor(estado,nombre, cantidad,colores, cuantosCirculos,ubicaciones,xyi,grosores){
+    constructor(estado,nombre,cantidad,colores,cuantosCirculos,ubicaciones,xyi,grosores){
         
         this.nombreTextura = nombre;
 
         nombre = createGraphics(600, 600);
-        nombre.background(220);    
-     
+        nombre.background(220);        
                
         for(let i = 0 ; i<cuantosCirculos ; i++){
                         
-            if(estado == 1 && estado == 2){
+            if(estado == 1 && estado == 2 && estado == 3){
                 nombre.stroke(colores[i]);  
             } else {
                 nombre.stroke(random(colores));
             }
-            nombre.stroke(random(colores));                                   
+            //nombre.stroke(random(colores));                                   
             nombre.strokeWeight(grosores[i]);
             nombre.noFill();
             nombre.ellipse(300, 300, xyi[j]+1*i*ubicaciones[j], xyi[j]+1*i*ubicaciones[j]);
